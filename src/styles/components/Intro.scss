@@ -1,0 +1,112 @@
+.Intro {
+  font-family: 'Montserrat', sans-serif;
+  
+  &__content {
+    margin: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &-title {
+      font-size: 3rem;
+      font-weight: 700;
+  
+      &--low {
+        font-size: 2rem;
+        color: #4AC959;
+      }
+    }
+
+    &-subtitle {
+      margin-top: 1.5rem;
+      font-size: 1em;
+      font-weight: 600;
+    }
+
+    &-button {
+      background-color: #4AC959;
+      padding: 1.125rem 3.5rem;
+      border: none;
+      border-radius: 10px;
+      margin-top: 2rem;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  &__image-container {
+    margin-top: 5rem;
+    position: relative;
+    width: 100vw;
+  }
+
+  &__image {
+    width: 70%;
+    left: 0;
+    top: 0;
+    transform: translate(25%, 25%);
+    height: auto;
+    z-index: 2;
+    position: absolute;
+  }
+
+  &__arrow {
+    width: 100vw;
+    height: auto;
+    rotate: 180deg;
+    z-index: 1;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    position: relative;
+    width: 100%;
+
+    &__content {
+      margin: 0 5rem;
+      &-title {
+        font-size: 5rem;
+    
+        &--low {
+          font-size: 3.75rem;
+        }
+      }
+      &-subtitle {
+        margin-top: 3.5rem;
+        font-size: 1.5rem;
+      }
+
+      &-button {
+        margin-top: 2.75rem;
+      }
+    }
+
+    &__image-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__image {
+      width: 27.5rem;
+      top: 0;
+      transform: translate(-25%, -15%);
+      right: 0;
+      left: auto;
+      height: auto;
+      z-index: 2;
+      position: absolute;
+    }
+
+    &__arrow {
+      position: absolute;
+      width: 40rem;
+      right: 0;
+      rotate: 0deg;
+      height: auto;
+      z-index: 0;
+      transform: translate(0, -28%);
+    }
+
+  }
+}

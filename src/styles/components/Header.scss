@@ -1,0 +1,36 @@
+.Header {
+  margin: 1.25rem 2.5rem;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 7rem;
+    height: auto;
+  }
+
+  &__login {
+    background-color: #000000;
+    padding: 0.375rem 2rem;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    z-index: 3;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: 3.25rem 5rem;
+
+    &__logo {
+      width: 13.5rem;
+      height: auto;
+    }
+
+    &__login {
+      padding: 0.625rem 2.188rem;
+    }
+  }
+}

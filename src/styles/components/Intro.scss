@@ -13,7 +13,7 @@
   
       &--low {
         font-size: 2rem;
-        color: #4AC959;
+        color: $primary;
       }
     }
 
@@ -24,7 +24,7 @@
     }
 
     &-button {
-      background-color: #4AC959;
+      background-color: $primary;
       padding: 1.125rem 3.5rem;
       border: none;
       border-radius: 10px;
@@ -39,6 +39,7 @@
     margin-top: 5rem;
     position: relative;
     width: 100vw;
+    z-index: 2;
   }
 
   &__image {
@@ -47,7 +48,6 @@
     top: 0;
     transform: translate(25%, 25%);
     height: auto;
-    z-index: 2;
     position: absolute;
   }
 
@@ -55,7 +55,6 @@
     width: 100vw;
     height: auto;
     rotate: 180deg;
-    z-index: 1;
   }
 
   @media (min-width: $breakpoint-desktop) {

@@ -1,0 +1,52 @@
+.Describe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #000000;
+  color: white;
+  margin-top: 0rem;
+  padding: 3rem;
+  transform: skewY(3deg);
+  z-index: 2;
+
+  &__title {
+    transform: skewY(-3deg);
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    border-bottom: 2px solid $primary;
+  }
+
+  &__title:after {
+    content: '';
+    transform: skewY(-3deg);
+    border-bottom: 2px solid $primary;
+    line-height: 2.75rem;
+  }
+
+  &__description {
+    transform: skewY(-3deg);
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 16rem;
+    padding: 7.5rem;
+    transform: skewY(-3deg);
+
+    &__title {
+      transform: skewY(3deg);
+      font-size: 3.75rem;
+    }
+
+    &__description {
+      transform: skewY(3deg);
+      margin-top: 2.5rem;
+      max-width: 37.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}

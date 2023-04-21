@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const Header = () => {
   return (
-    <header className="Header">
+    <header className="Header" id="header">
       <div className="Header__container">
         <Image
           className="Header__logo"

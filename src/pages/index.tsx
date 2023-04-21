@@ -1,6 +1,7 @@
 import { Describe } from '@/components/feature/Describe'
 import { Header } from '@/components/feature/Header'
 import { Intro } from '@/components/feature/Intro'
+import { TodoList } from '@/components/feature/TodoList'
 import Head from 'next/head'
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <Intro />
       <Describe />
+      <TodoList />
     </>
   )
 }

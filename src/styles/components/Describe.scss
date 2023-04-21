@@ -32,7 +32,7 @@
     font-size: 0.875rem;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-small-desktop) {
     margin-top: 16rem;
     padding: 7.5rem;
     transform: skewY(-3deg);

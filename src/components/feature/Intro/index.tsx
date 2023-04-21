@@ -11,7 +11,7 @@ export const Intro = () => {
           The only way to get things done
         </span>
 
-        <a className="Intro__content-button" href="#todoList">
+        <a className="Intro__content-button" href="#describe">
           Go to To-do list
         </a>
       </div>

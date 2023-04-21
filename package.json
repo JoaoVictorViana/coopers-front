@@ -33,6 +33,7 @@
     "react-sortablejs": "^6.1.4",
     "sass": "^1.62.0",
     "sortablejs": "^1.15.0",
+    "swiper": "^9.2.4",
     "typescript": "5.0.4"
   },
   "devDependencies": {

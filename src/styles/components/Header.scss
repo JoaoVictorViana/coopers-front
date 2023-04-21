@@ -21,7 +21,7 @@
     z-index: 3;
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-small-desktop) {
     margin: 3.25rem 5rem;
 
     &__logo {

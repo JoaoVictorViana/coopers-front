@@ -1,4 +1,5 @@
 import { Describe } from '@/components/feature/Describe'
+import { GoodThings } from '@/components/feature/GoodThings'
 import { Header } from '@/components/feature/Header'
 import { Intro } from '@/components/feature/Intro'
 import { TodoList } from '@/components/feature/TodoList'
@@ -18,6 +19,7 @@ export default function Home() {
       <Intro />
       <Describe />
       <TodoList />
+      <GoodThings />
     </>
   )
 }

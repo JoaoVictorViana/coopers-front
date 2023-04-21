@@ -18,7 +18,7 @@ export const DoneCard = () => {
   return (
     <div className="TodoList__card TodoList__card--done">
       <h3 className="TodoList__card-title">Done</h3>
-      {doneList.length > 1 && (
+      {doneList.length > 0 && (
         <span className="TodoList__card-description">Congratulions!</span>
       )}
       <span className="TodoList__card-description TodoList__card-description--bold">

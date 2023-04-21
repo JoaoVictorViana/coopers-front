@@ -5,3 +5,5 @@ export const KEYCODES = {
 }
 
 export const KEYENTERCODE = [KEYCODES.ENTER, KEYCODES.NUMPADENTER]
+
+export const DELAY_SWIPER_MS = 4000

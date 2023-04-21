@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const Intro = () => {
   return (
-    <section className="Intro">
+    <section className="Intro" id="intro">
       <div className="Intro__content">
         <h1 className="Intro__content-title">Organize</h1>
         <h2 className="Intro__content-title--low">your daily jobs</h2>
@@ -11,12 +11,9 @@ export const Intro = () => {
           The only way to get things done
         </span>
 
-        <button
-          className="Intro__content-button"
-          onClick={() => console.log('opa')}
-        >
+        <a className="Intro__content-button" href="#todoList">
           Go to To-do list
-        </button>
+        </a>
       </div>
       <div className="Intro__image-container">
         <Image

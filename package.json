@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
@@ -29,7 +30,12 @@
     "prettier": "^2.8.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-sortablejs": "^6.1.4",
     "sass": "^1.62.0",
+    "sortablejs": "^1.15.0",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/sortablejs": "^1.15.1"
   }
 }

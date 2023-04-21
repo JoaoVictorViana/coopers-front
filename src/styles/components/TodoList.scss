@@ -1,0 +1,187 @@
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  position: relative;
+  justify-content: center;
+
+  &__image {
+    width: 20vw;
+    height: auto;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+  }
+
+  &__card {
+    z-index: 3;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 12px rgba(66, 66, 66, 0.198454);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &--progress {
+      border-top: 10px solid $secondary;
+      margin-bottom: 1.5rem;
+    }
+
+    &--done {
+      border-top: 10px solid $primary;
+    }
+
+    &-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &-description {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .75rem;
+
+      &--bold {
+        font-weight: 700;
+      }
+    }
+
+    &-button {
+      padding: 0.75rem 3.75rem;
+      border-radius: 10px;
+      background-color: #000000;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    &-list {
+      margin-top: 1.5rem;
+      min-height: 10vh;
+      width: 100%;
+    }
+
+    &-new {
+      margin-top: 1rem;
+      width: 10rem;
+    }
+  }
+  
+  &__sortable {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    grid-template-columns: 1.5rem 1fr 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;    
+
+    &-text {
+      width: 9rem;
+      word-break: break-all;
+      font-size: 0.75rem;
+      font-family: 'Montserrat', sans-serif;
+      cursor: text;
+    }
+
+    &-text:hover {
+      font-weight: 700;
+    }
+
+    &-input {
+      width: 9rem;
+      font-size: 0.75rem;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    &-input:focus {
+      color: #E38D3F;
+    }
+
+    &-input:focus-visible {
+      outline: none;
+    }
+
+    &-delete {
+      background-color: white;
+      font-family: 'Montserrat', sans-serif;
+      border: none;
+      color: #999999;
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    &-delete:focus-visible, &-delete:hover {
+      outline: none;
+      color: black;
+    }
+  }
+
+  &__done {
+    &-text {
+      width: 9rem;
+      word-break: break-all;
+      font-size: 0.75rem;
+      font-family: 'Montserrat', sans-serif;
+      cursor: text;
+    }
+  }
+
+  &__sortable:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: 6rem;
+    flex-direction: row;
+    align-items: start;
+
+    &__image {
+      width: 10vw;
+      height: auto;
+      top: 0;
+      transform: translateY(-5%);
+    }
+
+    &__card {
+      padding: 2.5rem;
+
+      &--progress {
+        margin-right: 2.5rem;
+      }
+
+      &-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.25rem;
+      }
+
+      &-description {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+      }
+    }
+
+    &-button {
+      padding: 1.125rem 6.25rem;
+      margin-top: 2.5rem;
+    }
+
+    &-list {
+      margin-top: 2rem;
+    }
+
+    &__sortable {
+      &:hover &-delete {
+        display: block;
+      }
+
+      &-delete{
+        display: none;
+      }
+    }
+  }
+}

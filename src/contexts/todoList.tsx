@@ -69,14 +69,8 @@ export const TodoListProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const updateItem = useCallback(
     (text: string, id: string) => {
-      const itemIndex = todoList.findIndex((item) => item.id === id)
-
-      if (itemIndex === -1) return
-
       setTodoList((prev) =>
-        prev.map((item, index) =>
-          index === itemIndex ? { ...item, text } : item
-        )
+        prev.map((item) => (item.id === id ? { ...item, text } : item))
       )
     },
     [todoList]

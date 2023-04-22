@@ -1,0 +1,75 @@
+.Footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 3.25rem;
+  margin-top: 2.5rem;
+  clip-path: polygon(0 16%, 100% 0, 100% 100%, 0% 100%);
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+  }
+
+  &__email {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:link, &:visited {
+      color: white;
+    }
+
+    &:active {
+      color: $primary-500;
+    }
+
+    &:hover {
+      color: $primary-300
+    }
+  }
+
+  &__rights-reserved {
+    margin-bottom: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  &__rect {
+    clip-path: polygon(0 27%, 100% 0, 100% 100%, 0% 100%);
+    background-color: $primary;
+    height: 2rem;
+    width: 80%;
+  }
+
+  @media (min-width: $breakpoint-small-desktop) {
+    padding-top: 4.75rem;
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    &__email {
+      font-size: 1.5rem;
+      margin-bottom: 1.125rem;
+
+    }
+
+    &__rights-reserved {
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+    }
+
+    &__rect {
+      width: 32rem;
+    }
+  }
+}

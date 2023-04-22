@@ -102,9 +102,14 @@
       color: #42D76B;
       text-decoration: none;
       margin-top: 2rem;
+      outline: none; 
 
       &:hover {
         color: $primary;
+      }
+
+      &:focus-within {
+        color: black;
       }
     }
     
@@ -113,14 +118,14 @@
   @media (min-width: $breakpoint-small-desktop) {
     height: 32.5rem;
     padding: 5rem 5rem 0 5rem;
-    margin: 4.25rem 13.75rem 50rem 8.75rem;
+    margin: 4.25rem 13.75rem 0 8.75rem;
 
     &__title {
       font-size: 3rem;
     }
 
     &__swiper {
-      height: 30rem;
+      height: 27rem;
 
       &-container {
         width: 78vw;
@@ -133,7 +138,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: none!important;
+        margin-top: 7.25rem;
 
         &-items {
           width: auto !important;

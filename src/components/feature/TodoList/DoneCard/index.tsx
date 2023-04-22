@@ -1,6 +1,7 @@
 import { useTodoList } from '@/contexts/todoList'
 import { ReactSortable } from 'react-sortablejs'
 import { useMemo } from 'react'
+import { Button } from '@/components/core/Button'
 import { DoneItem } from './Item'
 
 export const DoneCard = () => {
@@ -39,9 +40,13 @@ export const DoneCard = () => {
         </ReactSortable>
       </div>
 
-      <button className="TodoList__card-button" onClick={eraseAllDoneList}>
+      <Button
+        variant="secondary"
+        className="TodoList__card-button"
+        onClick={eraseAllDoneList}
+      >
         erase all
-      </button>
+      </Button>
     </div>
   )
 }

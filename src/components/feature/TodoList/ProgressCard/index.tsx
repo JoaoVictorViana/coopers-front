@@ -2,6 +2,7 @@ import { ReactSortable } from 'react-sortablejs'
 import { KeyboardEvent, useCallback, useRef } from 'react'
 import { useTodoList } from '@/contexts/todoList'
 import { KEYCODES, KEYENTERCODE } from '@/configs/contants'
+import { Button } from '@/components/core/Button'
 import { SortableItem } from './Item'
 
 export const ProgressCard = () => {
@@ -78,9 +79,13 @@ export const ProgressCard = () => {
         />
       </div>
 
-      <button className="TodoList__card-button" onClick={eraseAllTodoList}>
+      <Button
+        variant="secondary"
+        className="TodoList__card-button"
+        onClick={eraseAllTodoList}
+      >
         erase all
-      </button>
+      </Button>
     </div>
   )
 }

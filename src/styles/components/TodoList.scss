@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background-color: white;
 
     &--progress {
       border-top: 10px solid $secondary;
@@ -179,8 +179,18 @@
         display: block;
       }
 
+      &-text, &-input {
+        font-size: 1rem;
+      }
+
       &-delete{
         display: none;
+      }
+    }
+
+    &__done {
+      &-text {
+        font-size: 1rem;
       }
     }
   }

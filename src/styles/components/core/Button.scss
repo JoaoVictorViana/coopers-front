@@ -1,0 +1,32 @@
+.Button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &__primary {
+    background-color: $primary;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+    &:focus, &:hover {
+      background-color: $primary-300;
+    }
+
+    &:active {
+      background-color: $primary-500;
+    }
+  }
+
+  &__secondary {
+    background-color: black;
+    color: white;
+
+    &:focus, &:hover {
+      background-color: #363636;
+    }
+
+    &:active {
+      background-color: #545454;
+    }
+  }
+}

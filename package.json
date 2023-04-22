@@ -26,15 +26,18 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.11",
+    "formik": "^2.2.9",
     "next": "13.3.0",
     "prettier": "^2.8.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-phone-input-2": "^2.15.1",
     "react-sortablejs": "^6.1.4",
     "sass": "^1.62.0",
     "sortablejs": "^1.15.0",
     "swiper": "^9.2.4",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@types/sortablejs": "^1.15.1"

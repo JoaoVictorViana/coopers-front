@@ -1,0 +1,84 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    color: #06152B;
+    font-family: 'Montserrat', sans-serif;
+
+    &--error {
+      color: $danger;
+    }
+  }
+
+  &__helperText {
+    margin-top: 0.25rem;
+    font-size: 0.65rem;
+    color: #06152B;
+    font-family: 'Montserrat', sans-serif;
+    
+    &--error {
+      color: $danger;
+    }
+  }
+
+  &__field {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    border: 1px solid #06152B;
+    width: 100%;
+
+    &::placeholder {
+      color: #9A9A9A;
+      font-size: 0.75rem;
+      font-family: 'Montserrat', sans-serif;  
+    }
+
+    &:hover {
+      border-color: $primary-300;
+    }
+
+    &:focus-within {
+      outline-color: $primary;
+    }
+
+    &--error, &--error::placeholder {
+      outline-color: $danger;
+      border-color: $danger;
+      color: $danger;
+    }
+
+    &--error:hover {
+      outline-color: $danger-300;
+      border-color: $danger-300;
+    }
+
+    &--error:focus-within {
+      outline-color: $danger-300;
+      border-color: $danger-300;
+    }
+  }
+
+  .flag-dropdown, .special-label {
+    display: none;
+  }
+  
+  @media (min-width: $breakpoint-small-desktop) {
+    &__label, &__field, &__field::placeholder {
+      font-size: 1rem;
+    }
+
+    &__helperText {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    &__field {
+      padding: 1rem;
+    }
+  }
+}

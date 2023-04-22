@@ -1,3 +1,4 @@
+import { ContactUs } from '@/components/feature/ContactUs'
 import { Describe } from '@/components/feature/Describe'
 import { GoodThings } from '@/components/feature/GoodThings'
 import { Header } from '@/components/feature/Header'
@@ -20,6 +21,7 @@ export default function Home() {
       <Describe />
       <TodoList />
       <GoodThings />
+      <ContactUs />
     </>
   )
 }

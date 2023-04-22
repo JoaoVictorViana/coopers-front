@@ -1,3 +1,4 @@
+import { Button } from '@/components/core/Button'
 import Image from 'next/image'
 
 export const Header = () => {
@@ -11,9 +12,13 @@ export const Header = () => {
           height={50}
           alt="Logo da Coopers"
         />
-        <button className="Header__login" onClick={() => console.log('opa')}>
+        <Button
+          variant="secondary"
+          className="Header__login"
+          onClick={() => console.log('opa')}
+        >
           entrar
-        </button>
+        </Button>
       </div>
     </header>
   )

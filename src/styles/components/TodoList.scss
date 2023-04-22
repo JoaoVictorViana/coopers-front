@@ -179,8 +179,18 @@
         display: block;
       }
 
+      &-text, &-input {
+        font-size: 1rem;
+      }
+
       &-delete{
         display: none;
+      }
+    }
+
+    &__done {
+      &-text {
+        font-size: 1rem;
       }
     }
   }

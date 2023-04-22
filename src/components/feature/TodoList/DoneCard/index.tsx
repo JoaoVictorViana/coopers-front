@@ -22,7 +22,11 @@ export const DoneCard = () => {
       {doneList.length > 0 && (
         <span className="TodoList__card-description">Congratulions!</span>
       )}
-      <span className="TodoList__card-description TodoList__card-description--bold">
+      <span
+        className={`TodoList__card-description ${
+          doneList.length > 0 && 'TodoList__card-description--bold'
+        }`}
+      >
         {label}
       </span>
 

@@ -1,5 +1,6 @@
 import { ContactUs } from '@/components/feature/ContactUs'
 import { Describe } from '@/components/feature/Describe'
+import { Footer } from '@/components/feature/Footer'
 import { GoodThings } from '@/components/feature/GoodThings'
 import { Header } from '@/components/feature/Header'
 import { Intro } from '@/components/feature/Intro'
@@ -22,6 +23,7 @@ export default function Home() {
       <TodoList />
       <GoodThings />
       <ContactUs />
+      <Footer />
     </>
   )
 }

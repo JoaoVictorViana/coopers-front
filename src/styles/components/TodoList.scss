@@ -33,7 +33,7 @@
     }
 
     &-title {
-      font-family: 'Poppins', sans-serif;
+      font-family: $ff-secondary;
       font-size: 1.75rem;
       font-weight: 600;
       line-height: 1.5rem;
@@ -41,7 +41,6 @@
     }
 
     &-description {
-      font-family: 'Montserrat', sans-serif;
       font-size: .75rem;
 
       &--bold {
@@ -76,14 +75,12 @@
     gap: 0.5rem;
     grid-template-columns: 1.5rem 1fr 2.5rem;
     margin-bottom: 1rem;
-    font-family: 'Montserrat', sans-serif;
     cursor: pointer;    
 
     &-text {
       width: 9rem;
       word-break: break-all;
       font-size: 0.75rem;
-      font-family: 'Montserrat', sans-serif;
       cursor: text;
     }
 
@@ -95,7 +92,6 @@
       width: 9rem;
       font-size: 0.75rem;
       border: none;
-      font-family: 'Montserrat', sans-serif;
     }
 
     &-input:focus {
@@ -108,7 +104,6 @@
 
     &-delete {
       background-color: white;
-      font-family: 'Montserrat', sans-serif;
       border: none;
       color: #999999;
       font-weight: 700;
@@ -126,7 +121,6 @@
       width: 9rem;
       word-break: break-all;
       font-size: 0.75rem;
-      font-family: 'Montserrat', sans-serif;
       cursor: text;
     }
   }
@@ -160,8 +154,7 @@
       }
 
       &-description {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.5rem;
+          font-size: 1.5rem;
       }
       &-button {
         padding: 1.125rem 6.25rem;

@@ -60,7 +60,7 @@ export class ApiGateway
 
         config.headers = {
           ...config.headers,
-          Authorization: `bearer ${
+          Authorization: `Bearer ${
             this.tokenManager.get(this.configs?.tokens).accessToken ?? ''
           }`,
         }

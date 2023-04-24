@@ -1,0 +1,44 @@
+FROM node:18.13.0-alpine AS base
+
+USER node
+
+RUN mkdir /home/node/project
+
+WORKDIR /home/node/project
+
+FROM base AS build
+
+COPY --chown=node package*.json yarn.lock ./
+
+RUN yarn install --network-timeout 100000
+
+ARG NEXT_ENV=production
+
+RUN echo "Executando build $NEXT_ENV"
+
+# .env .env.${NEXT_ENV}
+COPY --chown=node .env \
+  tsconfig.json \
+  next-env.d.ts \
+  next.config.js \
+  .eslintignore \
+  .prettierrc.json \
+  .eslintrc.json ./
+
+COPY --chown=node src src
+
+RUN yarn build
+
+FROM base AS deploy
+
+COPY --chown=node public public
+
+COPY --from=build /home/node/project/node_modules node_modules
+
+COPY --from=build /home/node/project/package.json ./
+
+COPY --from=build /home/node/project/.next .next
+
+EXPOSE 3000
+
+CMD npm start

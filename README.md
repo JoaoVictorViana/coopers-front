@@ -63,6 +63,8 @@ Em seguinda será necessário criar o arquivo .env que contém a variável da ur
 NEXT_PUBLIC_API_URL=http://50.19.173.216:3000
 ```
 
+Observação: Para fazer o login na plataforma, será necessário instalar e configurar a api que está [aqui](https://github.com/JoaoVictorViana/coopers-api)
+
 Por fim rode os seguintes comandos para rodar a aplicação, e logo após acesse http://localhost:3000
 
 ```bash

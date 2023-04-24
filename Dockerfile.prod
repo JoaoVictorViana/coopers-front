@@ -19,7 +19,6 @@ RUN echo "Executando build $NEXT_ENV"
 # .env .env.${NEXT_ENV}
 COPY --chown=node .env \
   tsconfig.json \
-  next-env.d.ts \
   next.config.js \
   .eslintignore \
   .prettierrc.json \

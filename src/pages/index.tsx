@@ -4,6 +4,7 @@ import { Footer } from '@/components/feature/Footer'
 import { GoodThings } from '@/components/feature/GoodThings'
 import { Header } from '@/components/feature/Header'
 import { Intro } from '@/components/feature/Intro'
+import { LoginModal } from '@/components/feature/LoginModal'
 import { TodoList } from '@/components/feature/TodoList'
 import Head from 'next/head'
 
@@ -24,6 +25,8 @@ export default function Home() {
       <GoodThings />
       <ContactUs />
       <Footer />
+
+      <LoginModal />
     </>
   )
 }

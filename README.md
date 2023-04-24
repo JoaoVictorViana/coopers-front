@@ -1,38 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Desafio Coopers Full Stack
 
-## Getting Started
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 
-First, run the development server:
+## Desafio
+
+Link do desafio completo clique [aqui](https://github.com/CoopersDigitalProduction/full-stack-test/)
+
+Link do Projeto: [Coopers Challange](http://3.95.27.90)
+
+Para desenvolver este desafio utilizei as seguintes ferramentas:
+
+- ReactJS
+- NextJS
+- NestJs
+- Mysql
+- React Context
+- Core/Feature (organização dos Components)
+- Docker
+- AWS
+
+### Requerimentos
+
+- Nodejs: 18.12.0 ou superior
+- Docker (opcional)
+
+### Board
+
+Para fins de organização, construi esta [board](https://github.com/users/JoaoVictorViana/projects/1) para listar todas as demandas necessárias para a construção do projeto. 
+
+### Deploy
+
+O projeto foi hospedado na AWS para facilitar a visualização:
+
+[Coopers](http://3.95.27.90)
+
+Foi utilizado os seguintes serviços da AWS:
+
+- ECR (Amazon Elastic Container Registry)
+- ECS (Amazon EC2 Container Service)
+
+## Instalação
+
+Primeiro será necessário clonar essa aplicação com os seguintes comandos
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/JoaoVictorViana/coopers-front.git
+cd coopers-front
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Em seguida instale todas as dependências do projeto
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Em seguinda será necessário criar o arquivo .env que contém a variável da url da api
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+#criar .env e colocar a seguinte váriavel
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+NEXT_PUBLIC_API_URL=http://50.19.173.216:3000
+```
 
-## Learn More
+Por fim rode os seguintes comandos para rodar a aplicação, e logo após acesse http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn build && yarn start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Docker
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+O projeto inclui uma imagem Dockerfile, portanto caso queira rodar toda aplicação em um container execute os seguintes comandos:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+docker build -t nextjs-docker .
+docker run -p 3000:3000 nextjs-docker
+```

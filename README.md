@@ -13,9 +13,13 @@ Para desenvolver este desafio utilizei as seguintes ferramentas:
 
 - ReactJS
 - NextJS
+- TypeScript
+- Sass
 - NestJs
-- Mysql
+- Mysql (Maria DB)
 - React Context
+- React Query
+- Zustand
 - Core/Feature (organização dos Components)
 - Docker
 - AWS

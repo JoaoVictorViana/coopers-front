@@ -33,6 +33,14 @@
     }
   }
 
+  &__response {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: $danger;
+  }
+
   &__form {
     margin-top: 2rem;
     display: flex;
@@ -96,6 +104,12 @@
         display: block;
         margin-right: 2.5rem;
       }
+    }
+
+    &__response {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: $danger;
     }
 
     &__form {

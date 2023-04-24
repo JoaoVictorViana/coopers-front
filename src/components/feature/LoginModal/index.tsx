@@ -1,42 +1,64 @@
 import { Button } from '@/components/core/Button'
 import { Input } from '@/components/core/Inputs/Input'
-import { login } from '@/fetchers/auth'
+import { login, register } from '@/fetchers/auth'
 import { useLoginModal } from '@/states/loginModal'
+import { useUserInfo } from '@/states/user'
 import Image from 'next/image'
-import { ChangeEvent, useCallback, useState } from 'react'
+import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
 import Modal from 'react-modal'
 
 export const LoginModal = () => {
   const { visible, close } = useLoginModal()
   const [mode, setMode] = useState<'login' | 'register'>('login')
+  const updateUser = useUserInfo((story) => story.setUsername)
   const [fields, setFields] = useState({
     username: '',
     password: '',
   })
+  const [response, setResponse] = useState('')
 
   const handleChangeToRegister = useCallback(() => setMode('register'), [])
   const handleChangeField = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    // if (!formRef.current) return
-
     const name = e.target.getAttribute('name')
     const { value } = e.target
 
     if (!name) return
 
     setFields((prev) => ({ ...prev, [name]: value }))
-    // formRef.current.setFieldValue(name, value)
   }, [])
 
   const handleClose = useCallback(() => {
     close()
     setMode('login')
+    setResponse('')
   }, [])
 
-  const handleSubmit = useCallback(async () => {
-    await login(fields.username, fields.password)
+  const handleSubmit = useCallback(
+    async (e: FormEvent) => {
+      e.preventDefault()
+      if (mode === 'login') {
+        try {
+          const user = await login(fields.username, fields.password)
+          updateUser(user.username)
+          handleClose()
+          setResponse('')
+          return
+        } catch {
+          setResponse('Invalid credentials')
+          return
+        }
+      }
 
-    close()
-  }, [fields])
+      try {
+        await register(fields.username, fields.password)
+        setMode('login')
+        setResponse('')
+      } catch {
+        setResponse('User already exists')
+      }
+    },
+    [fields, mode]
+  )
 
   return (
     <Modal
@@ -71,7 +93,10 @@ export const LoginModal = () => {
           </h2>
         </div>
       </div>
-      <form className="LoginModal__form">
+
+      {response && <div className="LoginModal__response">{response}</div>}
+
+      <form onSubmit={handleSubmit} className="LoginModal__form">
         <Input
           label="User:"
           name="username"
@@ -97,11 +122,7 @@ export const LoginModal = () => {
             <a className="LoginModal__form-register">here</a>
           </span>
         )}
-        <Button
-          type="button"
-          onClick={handleSubmit}
-          className="LoginModal__form-submit"
-        >
+        <Button className="LoginModal__form-submit">
           {mode === 'login' ? 'Sign in' : 'Register'}
         </Button>
       </form>

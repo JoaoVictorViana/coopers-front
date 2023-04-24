@@ -76,33 +76,25 @@ export const TodoListProvider: FC<PropsWithChildren> = ({ children }) => {
     [todoList]
   )
 
-  const deleteItem = useCallback(
-    (id: string) => {
-      const itemIndex = todoList.findIndex((item) => item.id === id)
+  const deleteItem = useCallback((id: string) => {
+    setTodoList((prev) => {
+      const itemIndex = prev.findIndex((item) => item.id === id)
 
-      if (itemIndex === -1) return
+      if (itemIndex === -1) return prev
 
-      setTodoList((prev) => [
-        ...prev.slice(0, itemIndex),
-        ...prev.slice(itemIndex + 1),
-      ])
-    },
-    [todoList]
-  )
+      return [...prev.slice(0, itemIndex), ...prev.slice(itemIndex + 1)]
+    })
+  }, [])
 
-  const deleteDoneItem = useCallback(
-    (id: string) => {
-      const itemIndex = doneList.findIndex((item) => item.id === id)
+  const deleteDoneItem = useCallback((id: string) => {
+    setDoneList((prev) => {
+      const itemIndex = prev.findIndex((item) => item.id === id)
 
-      if (itemIndex === -1) return
+      if (itemIndex === -1) return prev
 
-      setDoneList((prev) => [
-        ...prev.slice(0, itemIndex),
-        ...prev.slice(itemIndex + 1),
-      ])
-    },
-    [doneList]
-  )
+      return [...prev.slice(0, itemIndex), ...prev.slice(itemIndex + 1)]
+    })
+  }, [])
 
   const checkItem = useCallback(
     (id: string) => {

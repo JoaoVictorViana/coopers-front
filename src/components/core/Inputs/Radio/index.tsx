@@ -30,7 +30,6 @@ export const RadioInput: FC<HTMLProps<HTMLInputElement>> = ({ ...props }) => {
       aria-checked
       tabIndex={-1}
       onKeyDown={handleKeyDown}
-      onTouchStart={handleClickContainer}
       onClick={handleClickContainer}
     >
       <input
